@@ -1,0 +1,117 @@
+@media (max-width: 768px) {
+    /* Ocultar el menú de navegación principal */
+    #navbar  {
+      display: none;
+      width: 100%;
+      background-color: #f9a826;
+      position: absolute;
+      top: 80px; /* Ajusta según la altura de tu header */
+      left: 0;
+      flex-direction: column;
+      
+    }
+  
+    #navbar ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #navbar li {
+      padding: 15px 20px;
+      width: 100%;
+    }
+  
+    #navbar li #sub-menu {
+      top: 40px;
+    }
+  
+  
+  
+    
+  
+    /* Mostrar el ícono de menú móvil */
+    #mobile {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  
+    /* Ocultar el botón de cerrar por defecto */
+    #Close {
+      display: none;
+    }
+  
+    /* Mostrar el botón de cerrar cuando el menú esté abierto */
+    #navbar.active {
+      display: flex;
+      transition: all 10s ease;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #img-slider {
+      height: 70vh;
+    }
+  
+    #img-slider .slide img {
+      height: 70vh;
+      object-position: center;
+    }
+  
+    #img-slider .slide .info {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 0 20px;
+    }
+  
+    #img-slider .slide .info h2 {
+      font-size: 1.8rem;
+    }
+  
+    #img-slider .slide .info p {
+      font-size: 1rem;
+    }
+  
+    #img-slider .slide .info button {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #feature {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    #feature .fe-box {
+      width: 90%;
+      max-width: 300px;
+    }
+  
+    
+  
+  
+  }
+  
+  
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    footer .col, footer .pay {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .pay img {
+      width: 150px;
+    }
+  }

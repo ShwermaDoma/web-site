@@ -1,0 +1,438 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --primary-color: #088178;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f4e3;
+}
+
+/********** Global Styles ************/
+
+h1 {
+  font-size: 3.125rem;
+  line-height: 4rem;
+  color: #222;
+}
+
+h2 {
+  font-size: 2.875rem;
+  line-height: 3.375rem;
+  color: #222;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+button.normal {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+button.white {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid white;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* header section */
+#logo {
+  cursor: pointer;
+}
+
+#logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 1px;
+}
+#Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  /*a cambiar*/
+  background: #d27232;
+  /*se gustaria cambiar tambien el shadow*/
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  left: 0;
+  /*para que sea el primero al mover la pagina */
+  z-index: 10;
+}
+
+#navbar ul {
+  display: flex; /*para que sean lineales*/
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  /*esto para espaciar los elementos*/
+  padding: 0 20px;
+  /*para que despues trabajamos sobre un subelement after ,hacer linea por abajo */
+  /*es importante el relative es para posicionarlo segun el elemento li !!!*/
+  position: relative;
+}
+
+#navbar li a {
+  /*tambien a cambiar*/
+  color: #1a1a1a;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 0;
+  /*para hacer el hover sobre los elementos de <a> despues necesito una transicion*/
+  transition: all 0.3s ease;
+}
+
+/*importante : en cada elemento del nav ul ,al hacer el hover 
+  cambia el color y el underline su width es pequenyo entonces hay 
+  que redimensionarlo */
+
+#navbar li a:hover,
+#navbar li a.active {
+  /*anyadimos la clase active para que queda siempre con el color este */
+  /*es el variable global en el root*/
+  color: var(--primary-color);
+}
+/*el underline with after*/
+#navbar li a:hover::after,
+#navbar li a.active::after {
+  /*para que no cambie de contenido despues del hover*/
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: var(--primary-color);
+  /*absolute para que quede ahi el underline*/
+  position: absolute;
+  /*y ahora vamos a posicionarlo*/
+  bottom: -4px; /*para que quede abajo*/
+  left: 20px; /*para que quede en el centro*/
+}
+
+#navbar li #sub-menu {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 10px;
+
+  z-index: 10;
+  background-color: #f9a826;
+}
+/*#navbar li:hover #sub-menu {
+    
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    
+    border: 1px solid #000;
+    
+    z-index: 10;
+    background-color: #f9a826;
+  }*/
+
+#sub-menu li {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+#sub-menu li a {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#sub-menu li a:hover {
+  color: var(--primary-color);
+}
+
+.head-cart {
+  font-size: 1.3rem; /*para que quede bien posicionada*/
+}
+
+#mobile {
+  display: none;
+}
+
+#Close {
+  display: none;
+}
+/*la imagen debe tener ancho desde el extremo derecha hasta el extremo izquierda*/
+/*.slide img {
+  width: 100%;
+  height: 50vh;
+  
+}*/
+
+/*hero section*/
+
+#tel {
+  background-color: #d27232;
+}
+
+#img-slider {
+  width: 100%;
+  height: 110vh; /*view height como se ve desde el primer de pantalla hasta el fin de pantalla*/
+  /*ahora para el campo de informacion dentro de esta seccion */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*es importante para posicionar el campo de info relativamente al section de slider*/
+  position: relative;
+  overflow: hidden;
+  /*para que no se vea el overflow de la imagen*/
+}
+
+#img-slider .slide img {
+  /*para que cubre todo el espacio que existe*/
+  object-fit: cover;
+  width: 100vw;
+  /*aqui es relevante anyadir 110 ,porque el header es de tamanyo sticky lo q ocupa una parte de la imagen por arriba*/
+  height: 100vh;
+  /*es importante tambien la posicion de la imagen*/
+  object-position: top right;
+  position: relative;
+  pointer-events: none;
+}
+
+#img-slider .slide .info {
+  /*para que quede en el centro de la imagen*/
+  position: absolute;
+  /*CAMBIAR LA POSICION DEL INFO*/
+  top: 30%;
+  left: 60%;
+  /*para dejarle a la derecha de la imagen*/
+  /*transform es para translate(x,y)*/
+  /*el menos para que empiexa desde el final*/
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  display: flex;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*esto para que no se haga copia del texto*/
+.select-none {
+  user-select: none;
+}
+
+#img-slider .slide .info h4 {
+  padding-bottom: 15px;
+}
+
+#img-slider .slide .info h2 {
+  color: rgb(200, 124, 10);
+  padding-bottom: 20px;
+}
+
+#img-slider .slide .info p {
+  padding-bottom: 20px;
+  color: chocolate;
+}
+/*54:25*/
+#img-slider .slide .info button {
+  /*seria buena idea de que consideres usar una div solo para este
+  campo de info y asi lo pones en relative  y no tendras problema*/
+  background-color: #f9a826;
+  padding: 7px 7px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Feature Section */
+
+#feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 200px;
+}
+
+#feature .fe-box {
+  width: 300px;
+
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+  border: 1px solid #cce7d0;
+  border-radius: 4px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  top: 30px;
+  margin-top: 100px;
+}
+
+#feature .fe-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 8px 0;
+  pointer-events: none;
+}
+
+#feature .fe-box:hover {
+  box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+#feature .fe-box h6 {
+  line-height: 20px;
+  padding: 15px 0;
+  background-color: #d27232;
+  border-radius: 4px;
+  color: white;
+  margin-bottom: 5px;
+  height: 55px;
+}
+
+.modal {
+  /*display: none;*/
+  visibility: hidden;
+  flex-direction: column;
+  width: 30%;
+  opacity: 0;
+  max-height: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.modal.show {
+  visibility: visible;
+  display: flex;
+  max-height: 100%;
+  opacity: 1;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.modal.show div {
+  border: 1px solid #d27232;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal.show div:hover {
+  background-color: #d27232;
+  transition: all 0.3s ease;
+}
+
+/*footer*/
+
+footer {
+  background-color: #d27232;
+  /*esto es para la version mobile*/
+  flex-wrap: wrap;
+  padding: 40px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  height: 100vh;
+  position: relative;
+}
+
+footer .col {
+  /*para centrar el col*/
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer .logo {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+footer h4 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+footer a {
+  color: #222;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.pay img {
+  width: 250px;
+}
+
+#copyright {
+  margin: 3px;
+}

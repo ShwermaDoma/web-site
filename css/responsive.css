@@ -1,0 +1,127 @@
+/*IPAD*/
+
+@media screen and (max-width: 900px) {
+  .secion-p1 {
+    padding: 40px;
+  }
+
+  #navbar {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 40vh;
+    width: 150px;
+    /*para que no apareczca lo ponemos a la derecha extremo*/
+    position: fixed;
+    top: 0;
+    right: -300px;
+    padding: 80px 0 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.1);
+    background-color: #d27232;
+    transition: all 0.4s ease;
+  }
+  #navbar.active {
+    right: 0;
+  }
+  #navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navbar li {
+    padding: 15px 20px;
+    width: 100%;
+  }
+
+  #mobile {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+  }
+  #Close {
+    display: none;
+  }
+
+  /*para el image slider*/
+  #img-slider {
+    height: 100vh;
+  }
+
+  #img-slider .slide img {
+    content: url("../imagenes/hero-section/wa9fa.jpg");
+    height: 100vh;
+    object-position: center; /*donde quieres que se muestra la foto*/
+  }
+
+  #img-slider .slide .info {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  #img-slider .slide .info h2 {
+    font-size: 1.8rem;
+  }
+
+  #img-slider .slide .info p {
+    font-size: 1rem;
+  }
+
+  #img-slider .slide .info button {
+    padding: 7px 7px;
+    font-size: 1rem;
+  }
+
+  /*para el feature*/
+  #feature {
+    justify-content: center;
+  }
+
+  #feature .fe-box {
+    width: 300px;
+    /**width: 100%;*/
+    margin: 10px 0;
+  }
+
+  #feature .fe-box img {
+    height: 180px;
+  }
+
+  #feature .fe-box h6 {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+  /*products*/
+  .modal.show {
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    transition: all 0.3 ease;
+  }
+  .modal.show div {
+    border: 1px solid #f9a826;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+
+/*PHONE*/
+@media screen and (max-width: 400px) {
+  
+  #feature .fe-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .modal.show {
+    width: 100%;
+  }
+}
