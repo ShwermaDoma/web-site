@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shawerma Doma</title>
+    <!-- font-awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- favicon -->
+    <link rel="icon" href="../img/favicon.ico" />
+    <!-- css style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header id="Header">
+      <!--link del logo-->
+
+      <a id="logo" href="">
+        <img src="imagenes/logo/logonuevo.jpg" alt="logo" class="logo" />
+      </a>
+
+      <nav id="navbar">
+        <ul>
+          <!--el active aqui para distinguirlo entre los otros <a> -->
+          <li><a class="active" href="#img-slider">Inicio</a></li>
+          <li><a href="#feature">Menu</a></li>
+          <li><a href="#Footer">Contacto</a></li>
+          <li><a href="https://parallevarya.com/shawerma-doma/">Pedidos en linea</a></li>
+          <!--importante para la version mobile-->
+        </ul>
+      </nav>
+      <div id="Close">
+        <i class="fa-solid fa-times" aria-hidden="true"></i>
+      </div>
+      <div id="mobile">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section id="img-slider">
+      <div class="slide active">
+        <img src="imagenes/hero-section/heroimage.png" alt="slide1" />
+        <!--hay que cambiarlo-->
+        <div class="info">
+          <br>
+          <h4 class="select-none">Sabor Único en Cada Bocado</h4>
+          <h2 class="select-none">Shawerma y Hamburguesas para Todos</h2>
+          <p class="select-none">
+            Descubre la fusión perfecta entre la tradición y el sabor.
+          </p>
+          <button id="tel" onclick="window.location.href='tel:+34688261924'  ">
+            Descubre Nuestro Menú y ¡Pide Ahora!
+            <i class="fa-solid fa-phone"></i>
+          </button>
+          <br>
+          <button id="tel" onclick="window.location.href='https://parallevarya.com/shawerma-doma/'  ">
+            Pedir online 
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+
+          <br>
+        </div>
+      </div>
+    </section>
+    <!-- Feature Section -->
+    <section id="feature" class="section-p1">
+      <!-- Cada div tiene una clase fe-box y un identificador único para poder manejar los submenús -->
+
+      <div class="fe-box">
+        <img src="imagenes/features/Shwerma.jpg" alt="Shawerma" />
+        <h6
+          id="menu-barsh"
+          class="select-none"
+          onclick="toggleMenu('menu-barsh','shawerma-menu')"
+        >
+          Shawerma
+        </h6>
+      </div>
+      <!--Menu Shewrma-->
+
+      <div id="shawerma-menu" class="modal select-none">
+        <div class="">
+          <h6>Shawerma de Pollo</h6>
+          <p>Pollo, Lechuga, Cebolla, Tomate y Salsa</p>
+          <p>(Contiene: gluten, lactosa y mostaza)</p>
+          <h6>precio: 4,50€</h6>
+        </div>
+        <div class="">
+          <h6>Shawerma de Pollo Completo</h6>
+          <p>Pollo, Lechuga, Cebolla, Tomate, Queso, Huevo y Salsa</p>
+          <p>(Contiene: gluten, lactosa, huevo y mostaza)</p>
+          <h6>precio: 5,00€</h6>
+        </div>
+        <div class="">
+          <h6>Shawerma de Pollo Súper Completo</h6>
+          <p>Pollo, Beicon, Lechuga, Cebolla, Tomate, Queso, Huevo y Salsa</p>
+          <p>(Contiene: gluten, lactosa,huevo y mostaza)</p>
+          <h6>precio: 5,50€</h6>
+        </div>
+        <!--cerrar el div de shwerma menu-->
+      </div>
+
+      <div class="fe-box">
+        <img src="imagenes/features/Hamburguesas.jpg" alt="Hamburguesas" />
+        <h6
+          id="menu-barhb"
+          class="select-none"
+          onclick="toggleMenu('menu-barhb','hamburguesa-menu')"
+        >
+          Hamburguesas
+        </h6>
+      </div>
+      <!--Menu Hamburguesas-->
+      <div id="hamburguesa-menu" class="modal select-none">
+        <div class="">
+          <h6>Hamburguesa Normal</h6>
+          <p>Ternera o Pollo, Lechuga, Cebolla, Tomate y Salsa</p>
+          <p>(Contiene: gluten, lactosa, sésamo y soja)</p>
+          <h6>precio: 3,00€</h6>
+        </div>
+        <div class="">
+          <h6>Hamburguesa con Queso</h6>
+          <p>Ternera o Pollo, Lechuga, Cebolla, Tomate, Queso y Salsa</p>
+          <p>(Contiene: gluten, lactosa, sésamo y soja)</p>
+          <h6>precio: 4,00€</h6>
+        </div>
+        <div class="">
+          <h6>Hamburguesa Completa</h6>
+          <p>Ternera o Pollo, Lechuga, Cebolla, Tomate, Queso, Huevo y Salsa</p>
+          <p>(Contiene: gluten, lactosa, huevo, mostaza, sésamo y soja)</p>
+          <h6>precio: 4,50€</h6>
+        </div>
+        <div class="">
+          <h6>Hamburguesa Súper Completa</h6>
+          <p>
+            Ternera o Pollo, Beicon, Lechuga, Cebolla, Tomate, Queso, Huevo y
+            Salsa
+          </p>
+          <p>(Contiene: gluten, lactosa,huevo y soja)</p>
+          <h6>precio: 5,00€</h6>
+        </div>
+
+        <!--cerrar el div de hamburguesa menu-->
+      </div>
+      <div class="fe-box">
+        <img src="imagenes/features/durum.jpg" alt="Durum" />
+        <h6
+          id="menu-bardu"
+          onclick="toggleMenu('menu-bardu','durum-menu')"
+          class="select-none"
+        >
+          Durum
+        </h6>
+      </div>
+      <!--Menu Durum-->
+      <div id="durum-menu" class="modal select-none">
+        <div class="">
+          <h6>Durum de Pollo</h6>
+          <p>Pollo, Lechuga, Cebolla, Tomate y Salsa</p>
+          <p>(Contiene: gluten, lactosa y mostaza)</p>
+          <h6>precio: 4,50€</h6>
+        </div>
+        <div class="">
+          <h6>Durum de Pollo Completo</h6>
+          <p>Pollo, Lechuga, Cebolla, Tomate, Queso, Huevo y Salsa</p>
+          <p>(Contiene: gluten, lactosa, huevo y mostaza)</p>
+          <h6>precio: 5,00€</h6>
+        </div>
+        <!--cerrar el div de durum menu-->
+      </div>
+
+      <div class="fe-box">
+        <img src="imagenes/features/tarrina.jpg" alt="Tarrinas" />
+        <h6
+          id="menu-barta"
+          class="select-none"
+          onclick="toggleMenu('menu-barbe','tarrina-menu')"
+        >
+          Tarrinas
+        </h6>
+      </div>
+      <!--Menu Tarrina-->
+      <div id="tarrina-menu" class="modal select-none">
+        <div class="">
+          <h6>Tarrina Grande de Pollo con patatas fritas y salsa</h6>
+          <p>(Contiene: lactosa y mostaza)</p>
+          <h6>precio: 5,00€</h6>
+        </div>
+        <div class="">
+          <h6>Tarrina Pequeña de Pollo con patatas fritas y salsa</h6>
+          <p>(Contiene: lactosa y mostaza)</p>
+          <h6>precio: 4,00€</h6>
+        </div>
+
+        <!--cerrar el div de tarrina menu-->
+      </div>
+      <div class="fe-box">
+        <img src="imagenes/features/menufin.png" alt="menus" />
+        <h6
+          id="menu-barme"
+          class="select-none"
+          onclick="toggleMenu('menu-barme','menus-menu')"
+        >
+          Menus Especial
+        </h6>
+      </div>
+      <!--Menu Menus-->
+      <div id="menus-menu" class="modal select-none">
+        <div class="">
+          <h6>Menú Shawerma de Pollo</h6>
+          <p>Shawerma de Pollo + Patatas Fritas + Refresco 0,33L</p>
+          <p>(Contiene: gluten, lactosa y mostaza)</p>
+          <h6>precio: 7,50€</h6>
+        </div>
+        <div class="">
+          <h6>Menú Shawerma de Pollo Completo</h6>
+          <p>Shawerma de Pollo Completo + Patatas Fritas + Refresco 0,33L</p>
+          <p>(Contiene: gluten, lactosa, huevo y mostaza)</p>
+          <h6>precio: 8,00€</h6>
+        </div>
+        <div class="">
+          <h6>Menú Shawerma de Pollo Súper Completo</h6>
+          <p>
+            Shawerma de Pollo Súper Completo + Patatas Fritas + Refresco 0,33L
+          </p>
+          <p>(Contiene: gluten, lactosa,huevo y mostaza)</p>
+          <h6>precio: 8,50€</h6>
+        </div>
+
+        <div class="">
+          <h6>Menú Durum de Pollo</h6>
+          <p>Durum de Pollo + Patatas Fritas + Refresco 0,33L</p>
+          <p>(Contiene: gluten, lactosa y mostaza)</p>
+          <h6>precio: 7,50€</h6>
+        </div>
+
+        <div class="">
+          <h6>Menú Durum de Pollo Completo</h6>
+          <p>Durum de Pollo Completo + Patatas Fritas + Refresco 0,33L</p>
+          <p>(Contiene: gluten, lactosa, huevo y mostaza)</p>
+          <h6>precio: 8,00€</h6>
+        </div>
+
+        <div class="">
+          <h6>Menú Hamburguesa Completa</h6>
+          <p>Hamburguesa Completa + Patatas Fritas + Refresco 0,33L</p>
+          <p>(Contiene: gluten, lactosa, huevo, sésamo y soja)</p>
+          <h6>precio: 6,50€</h6>
+        </div>
+        <!--cerrar el div de menus menu-->
+      </div>
+
+      <div class="fe-box">
+        <img src="imagenes/features/bebidas.jpeg" alt="bebidas" />
+        <h6
+          id="menu-barbe"
+          class="select-none"
+          onclick="toggleMenu('menu-barbe','bebida-menu')"
+        >
+          Bebidas
+        </h6>
+      </div>
+      <!--Menu Bebidas-->
+      <div id="bebida-menu" class="modal select-none">
+        <div class="">
+          <h6>Refresco</h6>
+          <p>(Coca Cola, Coca Cola Zero y Fanta)</p>
+          <h6>precio: 1,50€</h6>
+        </div>
+        <div class="">
+          <h6>Agua</h6>
+          <p>Agua Mineral 0,5L</p>
+          <h6>precio: 1,00€</h6>
+        </div>
+
+        <div class="">
+          <h6>Agua</h6>
+          <p>Agua Mineral 1,5L</p>
+          <h6>precio: 1,50€</h6>
+        </div>
+
+        <!--cerrar el div de bebida menu-->
+      </div>
+      <div class="fe-box">
+        <img
+          class="select-none"
+          src="imagenes/features/falafel.jpeg"
+          alt="falafel"
+        />
+        <h6
+          id="menu-barfa"
+          class="select-none"
+          onclick="toggleMenu('menu-barfa','falafel-menu')"
+        >
+          Falafel
+        </h6>
+      </div>
+
+      <!--Menu Falafel-->
+
+      <div id="falafel-menu" class="modal select-none">
+        <div class="">
+          <h6>Falafel</h6>
+          <p>Falafel, Lechuga, Cebolla, Tomate y Salsa</p>
+          <p>(Contiene: gluten, lactosa y mostaza)</p>
+          <h6>precio: 4,50€</h6>
+        </div>
+        <!--cerrar el div de falafel menu-->
+      </div>
+      <div class="fe-box">
+        <img src="imagenes/features/naggets.jpg" alt="naggets" />
+        <h6
+          id="menu-barna"
+          class="select-none"
+          onclick="toggleMenu('menu-barpz','nagget-menu')"
+        >
+          Nuggets De Pollo
+        </h6>
+      </div>
+      <!--Menu Nagget-->
+      <div id="nagget-menu" class="modal select-none">
+        <div class="">
+          <h6>Nuggets de Pollo</h6>
+          <p>6 Unidades</p>
+
+          <h6>precio: 3,00€</h6>
+        </div>
+        <!--cerrar el div de nagget menu-->
+      </div>
+      <div class="fe-box">
+        <img src="imagenes/features/patatas.jpg" alt="patatas" />
+        <h6
+          id="menu-barpt"
+          class="select-none"
+          onclick="toggleMenu('menu-barpt','patata-menu')"
+        >
+          Patatas Fritas
+        </h6>
+      </div>
+      <!--Menu Patatas-->
+      <div id="patata-menu" class="modal select-none">
+        <div class="">
+          <h6>Patatas Fritas</h6>
+          <p>Pequeña</p>
+
+          <h6>precio: 3,00€</h6>
+        </div>
+        <div class="">
+          <h6>Patatas Fritas</h6>
+          <p>Grande</p>
+
+          <h6>precio: 3,50€</h6>
+        </div>
+
+        <!--cerrar el div de patata menu-->
+      </div>
+      <div class="fe-box">
+        <img src="imagenes/features/Campero.jpg" alt="Campero" />
+        <h6
+          id="menu-barca"
+          class="select-none"
+          onclick="toggleMenu('menu-barca','Campero-menu')"
+        >
+          Campero Shawerma
+        </h6>
+      </div>
+      <!--Menu Campero-->
+      <div id="Campero-menu" class="modal select-none">
+        <div class="">
+          <h6>Campero Shawerma</h6>
+          <p>Pollo, Lechuga, Cebolla, Tomate y Salsa</p>
+          <p>(Contiene: gluten, lactosa y mostaza)</p>
+          <h6>precio: 6,50€</h6>
+        </div>
+
+        <!--cerrar el div de campero menu-->
+      </div>
+      <div class="fe-box">
+        <img src="imagenes/features/ensalada.jpg" alt="Ensalada" />
+        <h6
+          id="menu-baren"
+          class="select-none"
+          onclick="toggleMenu('menu-baren','ensalada-menu')"
+        >
+          Ensalada
+        </h6>
+      </div>
+      <!--Menu Ensalada-->
+      <div id="ensalada-menu" class="modal select-none">
+        <div class="">
+          <h6>Ensalada</h6>
+          <p>Lechuga, Cebolla, Tomate y Maiz</p>
+          <!--<p>(Contiene: gluten, lactosa y mostaza)</p>-->
+          <h6>precio: 4,00€</h6>
+        </div>
+
+        <!--cerrar el div de ensalada menu-->
+      </div>
+    </section>
+
+    <!-- Products Section -->
+
+    <!-- Call to Action -->
+
+    <!--Small Banner  -->
+
+    <!-- Feauture Banner -->
+
+    <!-- NewsLetter -->
+
+    <!-- Footer Deja wajd hit fih bzaf tl content -->
+    <footer id="Footer" class="section-p1">
+      <div class="col">
+        <img src="imagenes/logo/logonuevo.jpg" alt="logo" class="logo" />
+        <h4>Contacto</h4>
+        <p>
+          <i class="fa-solid fa-map-marker-alt"></i>
+          <strong>Direccion:</strong>Av. Andalucía, 20, 18690 Almuñécar, Granada
+          España
+        </p>
+
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          <strong>Telefono:</strong> 958 63 55 05/688 26 19 24
+        </p>
+        <p>
+          <i class="fa-solid fa-clock"></i>
+          <strong>Horario:</strong>20:00 - 23:59, Lunes-Domingo
+        </p>
+        <p>
+          <i class="fa-solid fa-truck"></i>
+          <strong>Servicio a Domicilio +2,00 € </strong>(Pedido minimo 10€)
+        </p>
+        <p>
+          <i class="fa-solid fa-money-bill-wave"></i>
+          <strong>Sólo aceptamos Pago en Efectivo</strong>
+        </p>
+
+        <div class="follow">
+          <h4>Sigue nos en:</h4>
+          <div class="icon">
+            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+          </div>
+        </div>
+        <h4 id="copyright">
+          &copy; 2024 Shawerma Doma. Todos los derechos reservados.
+        </h4>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
